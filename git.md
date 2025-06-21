@@ -7,6 +7,9 @@
 ## To check the staged and unstaged changes
 `git status`
 
+## To see your remote repo urls
+`git remote -v`
+
 ## Save / stage changes
 All the changes in question -> `git add .`
 Specific changes in question -> `git add <file_name1_> <file_name_2>`
@@ -38,6 +41,9 @@ here the name of the connection between the local and remote repo is called 'ori
 ## Create a new git branch
 `git checkout -b branch-name`
 
+## To checkout a branch on the remote repo
+`git switch branch-name`
+
 ## Push a branch to github
 `git push origin branch-name`
 
@@ -64,3 +70,21 @@ git rebase main
 git checkout main
 git rebase feature-branch
 ```
+
+-- Configuration --
+# To set a config on your system
+`git config --global`
+or
+`git config --local`
+
+# To store the changes in a stack
+`git stash`
+
+# To stash every file out there including .env, venv, etc
+`git stash --all`
+
+-- Advanced commands --
+# To create a git alias for a command
+`git config --global alias.bb '!./run.sh'`
+
+git bb is equivalent to ./run.sh now
