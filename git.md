@@ -41,3 +41,26 @@ here the name of the connection between the local and remote repo is called 'ori
 ## Push a branch to github
 `git push origin branch-name`
 
+-- Delete options --
+## delete a branch
+`git branch -d branch-name`
+
+## force delete a branch
+`git branch -D branch-name`
+
+-- Merging --
+## Merge branch-X into your current branch
+`git merge branch-X`
+
+-- Rebasing --
+Kind of superimposes the commits on feature branch on top of your master branch
+
+## Rebase your branch
+```
+git checkout main
+git pull
+git checkout feature-branch
+git rebase main
+git checkout main
+git rebase feature-branch
+```
