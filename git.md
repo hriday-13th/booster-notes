@@ -90,6 +90,7 @@ or
 git bb is equivalent to ./run.sh now
 
 -- To check the differences between two git branches --
+# To check difference
 `git diff branch1..branch2`
 
 # to get the files with the changes
