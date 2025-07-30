@@ -1,18 +1,18 @@
-# Go routines are lightweight abstractions over threads
-# They're managed by the Go runtime scheduler
+Go routines are lightweight abstractions over threads
+They're managed by the Go runtime scheduler
 
-# The Go scheduler uses an M:N model
-# M = OS threads
-# N = goroutines
+The Go scheduler uses an M:N model
+M = OS threads
+N = goroutines
 
-# GOMAXPROCS = Number of CPU cores
+GOMAXPROCS = Number of CPU cores
 
 Side Note:
 Concurrency means executing multiple tasks at the same time conceptually, not simultaneously.
 
 Parallelism mean executing multiple tasks at the same exact time. Requires multiple CPU cores.
 
-# Go routines are scheduled cooperatively; they run until they block or yield (I/O, channel ops)
+## Go routines are scheduled cooperatively; they run until they block or yield (I/O, channel ops)
 
 
 ## Code implementations
@@ -46,9 +46,9 @@ func main() {
 }
 ```
 
-# Channels: A communication medium and data synchronization between go routines. They provide a means for go routines to send and receive values safely.
+## Channels: A communication medium and data synchronization between go routines. They provide a means for go routines to send and receive values safely.
 
-# Types of channels
+## Types of channels
 1. Unbuffered Channels - No capacity, sending and receiving blocks the routines.
 Unbuffered channels promote stricter synchronous code execution.
 
@@ -68,7 +68,7 @@ ch <- 2
 ch <- 3 // Gets blocked as channel is at its limit
 ```
 
-# Select statement
+## Select statement
 Select statement allows you to handle multiple channel operations simultaneously. Enables non-blocking communication between go routines.
 
 ```go
