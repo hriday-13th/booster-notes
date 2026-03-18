@@ -39,3 +39,8 @@ docker container prune -f
 docker image prune -f
 docker volumes prune -f
 docker network prune -f
+
+
+Always clean up before a cold restart after weeks of downtime:
+docker container prune -f
+docker-compose up -d
