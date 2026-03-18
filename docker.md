@@ -32,3 +32,10 @@ docker rmi myapp
 
 # Clean up unused images, containers, and networks
 docker system prune -f
+
+
+## Docker cleanup
+docker container prune -f
+docker image prune -f
+docker volumes prune -f
+docker network prune -f
